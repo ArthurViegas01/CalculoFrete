@@ -34,6 +34,24 @@ public class CalculoFreteController {
         cidadesAtendidas.put("São Paulo", new CustoBasicoTransporte("São Paulo", 10));
     }
 
+    // @RestController
+    // @RequestMapping("/calculoFrete")
+    // public class CalculoFreteController {
+    //     private IRepositorioDeCidades repositorioDeCidades;
+
+    //     @Autowired
+    //     public CalculoFreteController(IRepositorioDeCidades repositorioDeCidades) {
+    //         this.repositorioDeCidades = repositorioDeCidades;
+    //     }
+    // }
+
+    // @GetMapping("/cidadesAtendidas")
+    // @CrossOrigin(origins = "*")
+    // public ResponseEntity<List<String>> consultaCidadesAtendidas() {
+    //     List<String> cidades = repositorioDeCidades.todas().stream().map(c -> c.getNome()).toList();
+    //     return ResponseEntity.status(HttpStatus.OK).body(cidades);
+    // }
+
     @GetMapping("/cidadesAtendidas")
     @CrossOrigin(origins = "*")
     public ResponseEntity<List<String>> consultaCidadesAtendidas() {
